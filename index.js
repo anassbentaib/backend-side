@@ -18,11 +18,11 @@ app.get("/", (req, res) => {
 
 app.use("/contact", Contact);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const startServer = () => {
   try {
-    ConnectDB('mongodb+srv://personalApp:rEQq3gYNeJcCgiJV@cluster0.hnxpqnw.mongodb.net/?retryWrites=true&w=majority');
+    ConnectDB(process.env.CONNECTION_URL);
 
     app.listen(PORT, () =>
       console.log(`Server Running in the Port : http://localhost:${PORT}`)
