@@ -15,10 +15,8 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello from There ");
 });
-app.get("/contact", (req, res) => {
-  res.send("contact ");
-});
-// app.use("/contact", );
+
+app.use("/contact", Contact);
 
 const PORT = process.env.PORT || 5000;
 
