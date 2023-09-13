@@ -18,14 +18,13 @@ app.get("/", (req, res) => {
 
 app.use("/contact", Contact);
 
-const PORT = process.env.PORT || 5000;
 
 const startServer = () => {
   try {
-    ConnectDB(process.env.CONNECTION_URL);
+    ConnectDB('mongodb+srv://PizzaApp:thgBykhTck3XVmMP@cluster0.hnxpqnw.mongodb.net/?retryWrites=true&w=majority');
 
-    app.listen(PORT, () =>
-      console.log(`Server Running in the Port : http://localhost:${PORT}`)
+    app.listen(5000, () =>
+      console.log(`Server Running in the Port : http://localhost:5000`)
     );
   } catch (error) {
     console.log(error);
