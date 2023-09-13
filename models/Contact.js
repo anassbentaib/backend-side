@@ -6,6 +6,6 @@ const contactSchema = mongoose.Schema({
   description: { type: String, required: true },
 });
 
-const contactModel = mongoose.model("contactus", contactSchema);
+const contactModel = mongoose.model("contact-me", contactSchema);
 
 export default contactModel;

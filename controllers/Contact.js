@@ -12,15 +12,5 @@ export const insertContacter = async (req, res) => {
     }
   };
   
-  export const getContacter = async (req, res) => {
-    try {
-      const getSauce = await contactModel.find();
-  
-      // console.log("getSauce", getSauce);
-  
-      res.status(200).send( getSauce );
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
   
